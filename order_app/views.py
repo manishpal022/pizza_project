@@ -1,12 +1,12 @@
-from django.shortcuts import render
 from rest_framework import viewsets
-from rest_framework.decorators import action
 from .models import PizzaOrder
 from .serializers import PizzaOrderSerializer
 from rest_framework.response import Response
-from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter, OrderingFilter
+from rest_framework.decorators import action
 from rest_framework import status
+from django.shortcuts import render
 
 
 class CustomerViewSet(viewsets.ModelViewSet):
@@ -20,7 +20,6 @@ class CustomerViewSet(viewsets.ModelViewSet):
         return queryset
 
     def retrieve(self, request, *args, **kwargs):
-        # import pdb; pdb.set_trace()
         obj = self.get_object()
         serializer = PizzaOrderSerializer(obj)
         return Response(serializer.data)
