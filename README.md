@@ -1,14 +1,14 @@
 ## Installation
 Clone this git repository:
 ```
-git clone https://github.com/dakrulski/django-pizza-example.git
+git clone https://github.com/manishpal022/pizza_project.git
 ```
 Create a python virtual enviroment for python3 and activate it.
 
 Go to the project folder:
 
 ```
-cd pizza
+cd pizza_project
 ```
 Install the requirements:
 ```
