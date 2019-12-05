@@ -31,7 +31,7 @@ Endpoint	Description
 
 | Command | Description |
 | --- | --- |
-| `http://127.0.0.1:8000/order/list/<customer name>/` | to list the orders from a customer |
+| http://127.0.0.1:8000/order/list/<customer name>/ | to list the orders from a customer |
 | `/order/create/` | to create a new order |
 | `/order/create/` | to create a new order |
 | `/modify/<pizza id>/` | to update and delete an order |
