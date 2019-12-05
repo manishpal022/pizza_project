@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from django.conf.global_settings import DATE_INPUT_FORMATS
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -78,8 +80,11 @@ WSGI_APPLICATION = 'pizza_project2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'pizza_db',
+        'USER': 'postgres',
+        'PASSWORD': '123456',
+        'HOST': 'localhost'
     }
 }
 
@@ -122,6 +127,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
-# }

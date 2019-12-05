@@ -1,6 +1,5 @@
 from django.db import models
-from django.utils import timezone
-from django.core.validators import MinValueValidator, MaxValueValidator
+from datetime import datetime
 
 
 FLAVOURS_CHOICE = (
@@ -31,8 +30,13 @@ class PizzaOrder(models.Model):
     size = models.CharField(max_length=10, choices=SIZE_CHOICE)
     customer_name = models.CharField(max_length=30, blank=False)
     customer_address = models.TextField(blank=False)
-    ordered_time = models.DateTimeField(default=timezone.now, editable=False)
+    ordered_time = models.DateTimeField(default=datetime.now, editable=False)
     status = models.CharField(max_length=20, choices=STATUS_CHOICE, default='Open')
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ['-ordered_time']
+        unique_together = ('name', 'flavours', 'quantity', 'size')
+

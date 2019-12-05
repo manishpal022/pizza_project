@@ -5,7 +5,7 @@ from order_app import views
 
 
 router = routers.DefaultRouter()
-router.register(r'customer_orders', views.PizzaOrderViewSet, base_name='pizzaorder')
+router.register(r'customer_orders', views.CustomerViewSet, base_name='pizzaorder')
 router.register(r'owner_end', views.OwnerViewSet, base_name='ownerend')
 
 
