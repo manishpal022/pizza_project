@@ -26,16 +26,17 @@ This will start the webserver on http://127.0.0.1:8000/.
 
 ## Documentation
 The API endpoints are:
+Endpoint	Description
 
 | Command | Description |
 | --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
+| `/order/list/<customer name>/` | to list the orders from a customer |
+| `/order/create/` | to create a new order |
+| `/order/create/` | to create a new order |
+| `/modify/<pizza id>/` | to update and delete an order |
+| `/modify/<pizza id>/` | to update and delete an order |
+| `/modify/<pizza id>/` | to update and delete an order |
 
-Endpoint	Description
-/order/list/<customer name>/	to list the orders from a customer
-/order/create/	to create a new order
-/modify/<pizza id>/	to update and delete an order
 An automatic generated interactive API documentation can be found under http://127.0.0.1:8000/docs/ if the server is running.
 
 ## Tests
