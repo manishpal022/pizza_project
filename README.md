@@ -35,5 +35,6 @@ An automatic generated interactive API documentation can be found under http://1
 
 ## Tests
 To run the tests:
-
+```
 python manage.py test
+```
