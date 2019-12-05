@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from .models import PizzaOrder
-from .serializers import PizzaOrderSerializer, OwnerSerializer
+from .serializers import PizzaOrderSerializer
 from rest_framework.response import Response
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
@@ -58,44 +58,3 @@ class CustomerViewSet(viewsets.ModelViewSet):
         else:
             return Response('OOPS! : Order already in progress')
 
-
-class OwnerViewSet(viewsets.ModelViewSet):
-    http_method_names = ['get', 'put', 'patch', 'delete']
-    serializer_class = OwnerSerializer
-    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filter_fields = ('status',)
-    search_fields = ('customer_name',)
-    ordering_filters = ('ordered_time',)
-    ordering = ('-id',)
-
-    def get_queryset(self):
-        customer_name = self.request.query_params.get('customer_name', None)
-        if customer_name:
-            undelivered_queryset = PizzaOrder.objects.filter(customer_name__icontains=customer_name)
-        else:
-            undelivered_queryset = PizzaOrder.objects.all()
-        return undelivered_queryset
-
-    def list(self, request, *args, **kwargs):
-        orders = self.get_queryset()
-        # orders = PizzaOrder.objects.all()
-        serializer = OwnerSerializer(orders, many=True)
-        return Response(serializer.data)
-
-    def update(self, request, *args, **kwargs):
-        # import pdb;pdb.set_trace()
-        order = self.get_object()
-        data = request.data
-        order.status = data['status']
-
-        order.save()
-        serializer = PizzaOrderSerializer(order, partial=True)
-        return Response(serializer.data)
-
-    def destroy(self, request, *args, **kwargs):
-        order = self.get_object()
-        if order.status == 'Open':
-            order.delete()
-            return Response('Order Deleted !')
-        else:
-            return Response({'OOPS!': 'Order already in progress'})
