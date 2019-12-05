@@ -27,6 +27,11 @@ This will start the webserver on http://127.0.0.1:8000/.
 ## Documentation
 The API endpoints are:
 
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
 Endpoint	Description
 /order/list/<customer name>/	to list the orders from a customer
 /order/create/	to create a new order
