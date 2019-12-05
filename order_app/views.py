@@ -3,10 +3,6 @@ from .models import PizzaOrder
 from .serializers import PizzaOrderSerializer
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.filters import SearchFilter, OrderingFilter
-from rest_framework.decorators import action
-from rest_framework import status
-from django.shortcuts import render
 
 
 class CustomerViewSet(viewsets.ModelViewSet):
