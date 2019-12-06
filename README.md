@@ -44,12 +44,18 @@ Login with above credentials : http://127.0.0.1:8000/admin/
 
 ## Setup POSTGRESQL database
 We should have postgresql install already. Below is the configuration I set in settings.py(line 81-89). You can change as per yours.
+** For POSTGRESQL **
 ```
 'ENGINE': 'django.db.backends.postgresql',
 'NAME': 'pizza_db',
 'USER': 'postgres',
 'PASSWORD': '123456',
 'HOST': 'localhost'
+```
+** For SQLITE **
+```
+'ENGINE': 'django.db.backends.sqlite3',
+'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 ```
 
 ## Running
