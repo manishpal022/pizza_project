@@ -32,7 +32,11 @@ pip install -r requirements.txt
 
 ## Create Superuser
 ```
-python manage.py createsuperuser
+python manage.py createsuperuser  (for windows, Mac, Linux)
+```
+```
+winpty python manage.py createsuperuser   (if running in gitbash)
+
 ```
 Input : (name, password)
 
