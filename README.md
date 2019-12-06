@@ -10,8 +10,14 @@ pip install virtualenv
 ```
 virtualenv venv
 ```
+(for windows)
 ```
 ./venv/Scripts/activate
+```
+
+(for Mac/Linux)
+```
+source ./venv/Scripts/activate
 ```
 
 Go to the project folder:
