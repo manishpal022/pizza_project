@@ -38,12 +38,13 @@ python manage.py createsuperuser  (for windows, Mac, Linux)
 winpty python manage.py createsuperuser   (if running in gitbash)
 
 ```
-Input : (name, password)
+**Input :** (name, email, password1, password2)
 
 Login with above credentials : http://127.0.0.1:8000/admin/
 
 ## Setup POSTGRESQL database
 We should have postgresql install already. Below is the configuration I set in settings.py(line 81-89). You can change as per yours.
+
 **For POSTGRESQL**
 ```
 'ENGINE': 'django.db.backends.postgresql',
