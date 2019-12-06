@@ -14,6 +14,13 @@ Install the requirements:
 ```
 pip install -r requirements.txt
 ```
+
+## Create Superuser
+```
+python manage.py createsuperuser
+```
+input name, password
+
 ## Running
 Run the migrations:
 ```
