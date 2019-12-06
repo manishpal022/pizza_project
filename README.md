@@ -43,7 +43,7 @@ winpty python manage.py createsuperuser   (if running in gitbash)
 Login with above credentials : http://127.0.0.1:8000/admin/
 
 ## Setup POSTGRESQL database
-We should have postgresql install already. Below is the configuration I set in settings.py(line 81-89). You can change as per yours.
+We should have postgresql install already. Below is the configuration for postgresql I set in settings.py(line 81-89). You can change as per yours.
 
 **For POSTGRESQL**
 ```
