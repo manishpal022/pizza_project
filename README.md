@@ -3,7 +3,16 @@ Clone this git repository:
 ```
 git clone https://github.com/manishpal022/pizza_project.git
 ```
-Create a python virtual enviroment for python3 and activate it.
+Create a python virtual enviroment for python3 and activate it(you can skip this part)
+```
+pip install virtualenv
+```
+```
+virtualenv venv
+```
+```
+./venv/Scripts/activate
+```
 
 Go to the project folder:
 
