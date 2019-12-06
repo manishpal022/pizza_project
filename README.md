@@ -20,6 +20,7 @@ pip install -r requirements.txt
 python manage.py createsuperuser
 ```
 input name, password
+Login with above credentials : http://127.0.0.1:8000/admin/
 
 ## Running
 Run the migrations:
@@ -43,10 +44,11 @@ Endpoint	Description
 | `/customer_orders/<id>/` | to retrieve order by identifier(id) |
 | `/customer_orders/<id>/` | to update and delete an order |
 | `/customer_orders/?status=<status>&customer_name=<customer_name>/` | to filter either by status or customer_name or both |
+| `http://127.0.0.1:8000/admin/order_app/pizzaorder/` | to change status of any order(admin-page) |
 
 Note: 
 
-Only admin can change the status of delivery from admin page.
+Only admin can change the status of delivery from admin page(although, we can create another API for pizza owner end).
 
 Customer can delete order until order in Open status.
 
