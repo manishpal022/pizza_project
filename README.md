@@ -43,7 +43,7 @@ Only admin can change the status of delivery from admin page.
 
 Customer can delete order until order in Open status.
 
-Customer cannot update order is status set to delivered. 
+Customer cannot update order if status set to delivered. 
 
 ## Tests
 To run the tests:
