@@ -28,7 +28,8 @@ pip install -r requirements.txt
 ```
 python manage.py createsuperuser
 ```
-input name, password
+Input : (name, password)
+
 Login with above credentials : http://127.0.0.1:8000/admin/
 
 ## Running
