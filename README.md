@@ -38,9 +38,13 @@ Endpoint	Description
 | `/customer_orders/?status=<status>&customer_name=<customer_name>/` | to filter either by status or customer_name or both |
 
 Note: 
+
 Only admin can change the status of delivery from admin page.
-Customer can delete order until order in Open status
+
+Customer can delete order until order in Open status.
+
 Customer cannot update order is status set to delivered. 
+
 ## Tests
 To run the tests:
 ```
