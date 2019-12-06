@@ -31,11 +31,11 @@ Endpoint	Description
 
 | Command | Description |
 | --- | --- |
-| http://127.0.0.1:8000/order/list/<customer name>/ | to list the orders from a customer |
-| `/order/create/` | to create a new order |
-| `/order/create/` | to create a new order |
-| `/modify/<pizza id>/` | to update and delete an order |
-| `/modify/<pizza id>/` | to update and delete an order |
+| `/customer_orders/` | to list the orders from a customer |
+| `/customer_order/` | to create a new order |
+| `/customer_order/<id>` | to retrieve order by identifier(id) |
+| `/customer_order/<id>/` | to update and delete an order |
+| `/customer_order/?status=<status>&customer_name=<customer_name>/` | to filter either by status or customer_name or both |
 | `/modify/<pizza id>/` | to update and delete an order |
 
 An automatic generated interactive API documentation can be found under http://127.0.0.1:8000/docs/ if the server is running.
