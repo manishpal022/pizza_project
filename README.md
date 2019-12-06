@@ -40,7 +40,7 @@ winpty python manage.py createsuperuser   (if running in gitbash)
 ```
 **Input :** (name, email, password1, password2)
 
-Login with above credentials : http://127.0.0.1:8000/admin/
+Login with above credentials : http://127.0.0.1:8000/admin/ (after running server)
 
 ## Setup POSTGRESQL database
 We should have postgresql install already. Below is the configuration for postgresql I set in settings.py(line 81-89). You can change as per yours.
