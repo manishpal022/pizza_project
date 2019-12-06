@@ -63,9 +63,11 @@ Note:
 
 Only admin can change the status of delivery from admin page(although, we can create another API for pizza owner end).
 
-Customer can delete order until order in Open status.
+Customer can delete order until order is in 'Open' status.
 
-Customer cannot update order if status set to delivered. 
+Customer cannot update order if status set to 'Delivered'. 
+
+Customer able to order the same flavor of pizza but with different sizes multiple times.
 
 ## Tests
 To run the tests:
